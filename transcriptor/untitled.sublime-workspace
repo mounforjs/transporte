@@ -1,0 +1,707 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "viewLotes.php",
+			"settings":
+			{
+				"buffer_size": 8043,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/dev/transporte/request/viaje/ajaxClonarViaje.php",
+			"settings":
+			{
+				"buffer_size": 4428,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "request/ajaxNuevoViaje.php",
+			"settings":
+			{
+				"buffer_size": 4437,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/dev/transporte/pagina/viaje/consultarSolicitud.php",
+			"settings":
+			{
+				"buffer_size": 3162,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "viewSolicitud.php",
+			"settings":
+			{
+				"buffer_size": 3184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "viewConductores.php",
+			"settings":
+			{
+				"buffer_size": 9920,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/dev/transporte/pagina/conductor/nconductor.php",
+			"settings":
+			{
+				"buffer_size": 1275,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "nconductor.php",
+			"settings":
+			{
+				"buffer_size": 1272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/dev/transporte/request/viaje/ajaxGetViajePorSolicitud.php",
+			"settings":
+			{
+				"buffer_size": 1432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "request/ajaxGetViajesPorSolicitud.php",
+			"settings":
+			{
+				"buffer_size": 1424,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/dev/transporte/pagina/contenido/header.php",
+			"settings":
+			{
+				"buffer_size": 1541,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 332.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/www/dev/transporte",
+		"/var/www/dev/transporte/pagina",
+		"/var/www/dev/transporte/pagina/conductor",
+		"/var/www/dev/transporte/transcriptor"
+	],
+	"file_history":
+	[
+		"/var/www/dev/transporte/pagina/contenido/header_transcriptor.php",
+		"/var/www/dev/transporte/request/viaje/ajaxGetViajeID.php",
+		"/var/www/dev/transporte/db/dbconfig.php",
+		"/var/www/dev/transporte/request/viaje/ajaxGuardarViaje.php",
+		"/var/www/dev/transporte/request/viaje/ajaxClonarViaje3.php",
+		"/var/www/dev/transporte/pagina/viaje/viajeID.php",
+		"/var/www/dev/transporte/request/viaje/ajaxNuevoViaje.php",
+		"/var/www/dev/transporte/transcriptor/request/ajaxEditarViajeClonado3.php",
+		"/var/www/dev/transporte/transcriptor/nlote.php",
+		"/var/www/dev/transporte/transcriptor/request/ajaxRegistrarLote.php",
+		"/var/www/dev/transporte/request/viaje/ajaxViajeTerminado.php",
+		"/var/www/dev/transporte/transcriptor/request/ajaxClonarViaje3.php",
+		"/var/www/dev/transporte/request/viaje/ajaxEditarViajeClonado3.php",
+		"/var/www/dev/transporte/pagina/lote/visualizarLote.php",
+		"/var/www/dev/transporte/request/viaje/ajaxViajeTerminado2.php",
+		"/var/www/dev/transporte/request/lote/ajaxRegistrarLote.php",
+		"/var/www/dev/transporte/transcriptor/viewDestinos.php",
+		"/var/www/dev/transporte/transcriptor/ndestino.php",
+		"/var/www/html/unitesting/lib/php-activerecord/ActiveRecord.php",
+		"/var/www/html/unitesting/composer.json",
+		"/var/www/html/unitesting/phpunit.xml",
+		"/var/www/html/unitesting/index.php",
+		"/home/alex/.config/sublime-text-3/Packages/User/testcase.sublime-snippet",
+		"/home/alex/.config/sublime-text-3/Packages/User/pf.sublime-snippet",
+		"/var/www/html/unitesting/tests/CalculatorTest.php"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$rutal_model['precio']*30)/100",
+			"$rutal_model['precio']*50)/100",
+			"busqueda",
+			"termina"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "viewLotes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8043,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1436,
+								1436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/var/www/dev/transporte/request/viaje/ajaxClonarViaje.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4163,
+								4163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1470.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "request/ajaxNuevoViaje.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 280.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/var/www/dev/transporte/pagina/viaje/consultarSolicitud.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								710,
+								710
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "viewSolicitud.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2193,
+								2193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "viewConductores.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9311,
+								9311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2849.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/var/www/dev/transporte/pagina/conductor/nconductor.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								616,
+								616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "nconductor.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								543,
+								543
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/var/www/dev/transporte/request/viaje/ajaxGetViajePorSolicitud.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								535,
+								535
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "request/ajaxGetViajesPorSolicitud.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1424,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1222,
+								1222
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 22.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/var/www/dev/transporte/pagina/contenido/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"viewco",
+				"transcriptor/viewConductores.php"
+			],
+			[
+				"ajaxgetviajeid",
+				"request/viaje/ajaxGetViajeID.php"
+			],
+			[
+				"viajeid.php",
+				"pagina/viaje/viajeID.php"
+			],
+			[
+				"ajaxnuevo",
+				"request/viaje/ajaxNuevoViaje.php"
+			],
+			[
+				"ajaxviajeterminado2",
+				"request/viaje/ajaxViajeTerminado2.php"
+			],
+			[
+				"visual",
+				"pagina/lote/visualizarLote.php"
+			],
+			[
+				"ajaxed",
+				"request/viaje/ajaxEditarViajeClonado3.php"
+			],
+			[
+				"ajaxclonarviaje3",
+				"request/viaje/ajaxClonarViaje3.php"
+			],
+			[
+				"visuali",
+				"pagina/lote/visualizarLote.php"
+			],
+			[
+				"ajaxvia",
+				"request/viaje/ajaxViajeTerminado2.php"
+			],
+			[
+				"ajaxguar",
+				"request/viaje/ajaxGuardarViaje.php"
+			],
+			[
+				"ajaxclonarviaje",
+				"request/viaje/ajaxClonarViaje.php"
+			],
+			[
+				"ajaxviajeterminado",
+				"request/viaje/ajaxViajeTerminado.php"
+			],
+			[
+				"ajaxter",
+				"request/viaje/ajaxViajeTerminado2.php"
+			],
+			[
+				"viewde",
+				"transcriptor/viewDestinos.php"
+			],
+			[
+				"ajaxregistrarlo",
+				"request/lote/ajaxRegistrarLote.php"
+			],
+			[
+				"viewlo",
+				"transcriptor/viewLotes.php"
+			],
+			[
+				"active",
+				"lib/php-activerecord/ActiveRecord.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

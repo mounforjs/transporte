@@ -1,0 +1,278 @@
+a:link{color:#151515; text-decoration:none}
+a:hover{color:#0B243B; text-decoration:underline}
+a:visited{color:#151515; text-decoration:none}
+
+body
+{
+    background-color: #36393D;
+    margin-top: 12px;
+}
+.error{
+    color: #ff0000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    padding-left: 8px;
+}
+div#main
+{
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+.caja-totales{
+    float:right;
+
+}
+
+.caja{
+	float:left;
+}
+
+
+
+.label
+{
+    border:1px;
+    width: 80px;
+    margin-right: 7px;
+}
+
+div#header
+{
+    float:left;
+    min-width:100%;
+}
+
+div#header-titulo
+{
+    background-color: white;
+    float:left;
+    height: 25px;
+    min-width:80%;
+    margin-left:20px;
+    margin-right: 20px;
+    padding-top: 14px;
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+div#infobar
+{
+    background-color: #FF7400;
+    color:white;
+    float:left;
+    padding: 4px;
+    height:15px;
+    min-width:80%;
+    margin-left:20px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 9px;
+}
+
+.bar
+{
+    background-color: #FF7400;
+    font-weight: 600;
+    color:white;
+    padding-left: 10px;
+    padding-top: 6px;
+    height: 20px;
+}
+
+div#fecha
+{
+    float:left;
+}
+
+div#profile
+{
+    float:left;
+}
+
+div#contenido fieldset
+{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 15px;
+    width: 650px;
+}
+
+div#logout
+{
+    float:right;
+    padding:5px;
+   
+}
+
+.img
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+div#menu
+{
+    float:left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    padding:8px;
+    margin:7px; 
+}
+
+div#menu a
+{
+    text-decoration: none;
+}
+
+div#contenido
+{
+    float:left;
+    min-width: 100%;
+}
+
+div#maincontenido
+{
+    float:left;
+    margin-left:20px;
+    margin-right: 20px;
+    background-color:white;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 80%;
+}
+
+div#comprobanteinfo
+{
+   float:left;
+   width:500px;
+}
+
+div#divPopUp
+{
+    padding-left: 30px;
+}
+
+div#footer
+{
+    padding:6px;
+}
+
+
+
+input, textarea, select 
+{ 
+    border:1px solid #c8cacb;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px; padding:3px;
+    margin:4px;
+}
+
+.loginPanel
+{
+    float:left;
+    position:absolute;
+    padding-left: 30px;
+    padding-top: 19px;
+    margin-top: 0em; /*set to a negative number 1/2 of your height*/
+    margin-left: -21em; /*set to a negative number 1/2 of your width*/
+    top: 58%;
+    left: 50%;
+    width: 400px;
+    color: #fefefe;
+}
+
+.titulo
+{
+    font-family:Geneva,Arial,Helvetica,sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #36393D;
+}
+
+div#tituloBlank
+{
+    
+    font-family:Geneva,Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #f7f5f5;
+}
+
+.tituloCentrado
+{
+    font-family:Geneva,Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    float:left;
+    color: #52617d;
+    margin-top: 0em; /*set to a negative number 1/2 of your height*/
+    margin-left: -21em; /*set to a negative number 1/2 of your width*/
+    position:absolute;
+    top: 48%;
+    left: 80%;
+}
+
+.subTitulo
+{
+	font-family:tahoma, verdana, arial, sans-serif;
+	font-size: 13px;
+}
+
+tbody
+{
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:12px;
+}
+
+tbody th
+{
+	padding               : 5px 13px;
+}
+tbody tr td
+{
+	padding               : 5px 13px;
+
+}
+
+tfoot td,
+tfoot th
+{
+	border-left           : none;
+	border-top            : 1px solid #CCC;
+}
+
+th
+{
+	text-align:left;
+}
+
+.tableTitle
+{
+    background-color: #36393D;
+    color:white;
+    font-weight: 900;
+}
+
+.sub
+{
+   border-bottom-color:#424242;
+   border-bottom-width: 2px;
+   border-bottom-style:solid;
+   font-family:Geneva,Arial,Helvetica,sans-serif;
+   font-size: 11px;
+   font-weight: 500;
+}
+
+@media print{
+	.saltoPagina{
+		page-break-after:always;
+	}
+}
+

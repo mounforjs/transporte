@@ -1,0 +1,22 @@
+<?php
+function abrirConexion()
+{
+    $local=true;
+
+    if($local)
+    {
+       $conexion="host=localhost port=5432 dbname='qq' user='postgres' password='321.qwerty'";
+    }else
+    {
+       $conexion="host=arenas.sytes.net port=8888 dbname='transporte' user=postgres password=aw59lk123qwerty";
+    }
+
+    pg_connect($conexion);
+}
+
+function cerrarConexion()
+{
+    pg_close();
+}
+
+?>

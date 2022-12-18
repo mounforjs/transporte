@@ -1,0 +1,19 @@
+/* 
+    Document   : guia
+    Created on : 13/08/2010, 11:14:49 AM
+    Author     : aarenas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.tableTitle{
+    background-color: #848484;
+    color:white;
+    font-weight: 900;
+}
+

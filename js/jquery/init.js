@@ -1,0 +1,590 @@
+$().ready(function(){
+
+  /*  var baseURL="/transporte/";
+    var paginaURL="/pagina/";
+    var requestURL="/request/";
+
+    $(document).jkey('shift+s',function(){
+       //$("a[name='renlote']").click();
+     //  $.colorbox.remove();
+       // $.colorbox.init();
+
+
+       $(this).colorbox({open:"true",href:paginaURL+"lote/registrarEnLoteTags.php",transition:'fade', speed:400,width:"750px", height:"370px",onComplete:function(){
+        $("#txtTags_tagsinput").click();
+
+        $("#btnCopy").click(function(){
+            sessvars.$.clearMem() ;
+            ids=$("#txtTags").attr("value");
+            sessvars.miSession={copy:ids};
+        });
+
+        $("#btnPaste").click(function(){
+            $("#txtTags").attr("value",ids);
+            $("#txtTags").change();
+        });
+
+         $("#txtTags").change(function(){
+            $("#txtTags").tagsInput();
+         });
+        
+        $("#btnRegistrarTags").click(function(){
+
+            $.post(requestURL+"lote/ajaxRegistrarLoteTags.php",$("#frmViajesTags").serialize(),function(r){
+                if(r=="true"){
+                    alert("Registrados satisfactoriamente");
+                    document.location=document.location;
+                }else{
+                    alert("Los viajes "+r+" no puedieron ser añadidos. Es posible que estuvieran registrados en otro lote");
+                }
+             });
+
+         });
+
+    },onClosed:function(){
+
+    }});
+
+    });
+
+
+   $(document).jkey('shift+v',function(){
+
+       $(this).colorbox({open:"true",href:paginaURL+"lote/checkEnLoteTags.php",transition:'fade', speed:400,width:"750px", height:"370px",onComplete:function(){
+        $("#txtTags_tagsinput").click();
+
+
+        
+       $("#txtTags").attr("value",sessvars.miSession.copy);
+
+        $("#btnRegistrarTags").click(function(){
+
+            $.post(requestURL+"lote/ajaxVerificarLoteTags.php",$("#frmViajesTagsCheck").serialize(),function(r){
+                if(r=="true"){
+                    alert("Fueron encontrados todos los viajes");
+                    //document.location=document.location;
+                }else{
+                    alert("Los viajes "+r+" no fueron encontrados en este lote.");
+                }
+             });
+
+         });
+
+    },onClosed:function(){
+
+    }});
+
+    });
+
+    $(document).jkey('shift+e',function(){
+
+        $(this).colorbox({open:"true",href:paginaURL+"departamento/boxEmail.php",transition:'fade', speed:400,width:"930px", height:"530px",onComplete:function(){
+
+               $.post(requestURL+"departamento/ajaxGetDepartamentosEmail.php", null, function(r){
+                    if(r!="false"){
+                        $('#tabladepartamentos').append(r);
+                    }
+                    
+                });
+
+                $('.fecha').live('focus', function()
+                {
+                    if (!$(this).data('init'))
+                    {
+                        $(this).data('init', true);
+                        $(this).datepicker({dateFormat:'dd/mm/yy',changeYear: true,changeMonth:true,dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dec']});
+                        $(this).datepicker();
+
+                        $(this).trigger('focus');
+                    }
+                });
+
+                $(".enviar").live("click",function(){
+
+                    id=$(this).attr("name");
+                    fecha_ini=$("#fi-"+id).val();
+                    fecha_final=$("#ff-"+id).val();
+
+                    $("#fi-"+id).rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                     $("#ff-"+id).rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        if($('#frmEmails').validate().element("#fi-"+id) &
+                           $('#frmEmails').validate().element("#ff-"+id)){
+
+
+                            $(this).colorbox({open:"true",href:requestURL+"departamento/showEmail.php?departamento_id="+id+"&fecha_ini="+fecha_ini+"&fecha_final="+fecha_final,transition:'fade', speed:400,width:"930px", height:"530px",onComplete:function(){
+
+                                $("#btnEnviarEmail").click(function(){
+                                    
+                                    $.post(requestURL+"departamento/enviarEmail.php", {obs:$("#txtObservaciones").val(),departamento_id:id,fecha_ini:fecha_ini,fecha_final:fecha_final}, function(r){
+                                        if(r=="ok"){
+                                            alert("Enviado!");
+                                            $.colorbox.close();
+                                        }
+                                    });
+
+//                                    $(this).colorbox({open:"true",href:requestURL+"departamento/enviarEmail.php?obs="+$("#txtObservaciones").val()+"&departamento_id="+id+"&fecha_ini="+fecha_ini+"&fecha_final="+fecha_final,transition:'fade', speed:400,width:"930px", height:"530px",onComplete:function(){
+//
+//                                            
+//
+//                                    }});
+                                    
+                                });
+                                
+                            }});
+
+                        }
+
+
+
+                });
+
+                $('#frmEmails').validate({errorPlacement: function(error, element) {
+                            error.appendTo(element.parent());
+
+                        }});
+
+        }});
+
+    });
+
+
+
+    $(document).jkey('shift+d',function(){
+        
+        $(this).colorbox({open:"true",href:paginaURL+"destino/ndestino.php",transition:'fade', speed:400,width:"450px", height:"290px",onComplete:function(){
+
+                    $('#btnRegistrar').click(function(){
+
+                       $("#txtNombreDestino").rules("add", {
+                         required: true,remote:{url:requestURL+"destino/ajaxCheckDestino.php",type:"post",data:{estado:$('#selectEstado').val()}},
+                         messages: {
+                           required: "<br>Este campo es requerido",
+                           remote:"Este destino ya ha sido registrado anteriormente."
+                         }
+                        });
+
+                        $("#selectEstado").rules("add", {
+                             required: true,
+                             messages: {
+                               required: "<br>Este campo es requerido."
+                             }
+                        });
+
+                        if($('#frmDestino').validate().element("#txtNombreDestino") &
+                           $('#frmDestino').validate().element("#selectEstado")){
+                            $('#btnRegistrar').attr("disabled", "true");
+                            $.post(requestURL+"destino/ajaxRegistrarDestino.php", $('#frmDestino').serialize(), function(r){
+
+                                if(r=="ok")
+                                {
+                                    document.location=document.location;
+                                }else
+                                {
+                                    alert("No se pudo registrar el destino.");
+                                    $('#btnRegistrar').removeAttr("disabled");
+                                }
+                            });
+                        }
+
+
+                    });
+
+                    $('#frmDestino').validate({errorPlacement: function(error, element) {
+                    error.appendTo(element.parent());
+
+                }});
+
+                }});
+
+    });
+
+    $(document).jkey('shift+r',function(){
+
+                        $(this).colorbox({open:"true",href:paginaURL+"ruta/nruta.php",transition:'fade', speed:800,width:"750px", height:"330px",onComplete:function(){
+
+$("#btnBorrar").click(function(){
+$("#txtRuta").val("");
+});
+
+
+                    $('#btnAgregar').click(function(){
+
+                            $("#selectDestino").rules("add", {
+                             required:true,
+                             messages: {
+                               required:"Este campo es requerido."
+                             }
+                            });
+
+                            if($('#frmRuta').validate().element("#selectDestino")){
+
+                                $.post(requestURL+"ruta/ajaxGetDestino.php", {selectDestino:$('#selectDestino').val()}, function(r){
+
+                                    destino=r;
+
+                                    if($('#txtRuta').val()==""){
+                                        $('#txtRuta').val(destino);
+                                    }else{
+                                        $('#txtRuta').val($('#txtRuta').val()+" - "+destino);
+                                    }
+
+                                    if($('#txtRutaID').val()==""){
+                                        $('#txtRutaID').val($("#selectDestino").val());
+                                    }else{
+                                        $('#txtRutaID').val($('#txtRutaID').val()+"-"+$("#selectDestino").val());
+                                    }
+
+                                });
+
+                            }
+
+
+                        });
+
+
+                    $('#btnRegistrar').click(function(){
+
+                       $("#txtRuta").rules("add", {
+                         remote:{url:"../../request/ruta/ajaxCheckRuta.php",type:"post"},
+                         messages: {
+                           remote:"Esta Ruta ya ha sido registrada anteriormente."
+                         }
+                        });
+
+                        $("#txtRutaID").rules("add", {
+                         required:true,
+                         messages: {
+                           required:"Debe añadir por lo menos un destino a la ruta."
+                         }
+                        });
+
+
+                        if($('#frmRuta').validate().element("#txtRuta") &
+                           $('#frmRuta').validate().element("#txtRutaID")){
+                           $('#btnRegistrar').attr("disabled", "true");
+                            $.post(requestURL+"ruta/ajaxRegistrarRuta.php", $('#frmRuta').serialize(), function(r){
+
+                                if(r=="ok")
+                                {
+                                    document.location=document.location;
+                                }else
+                                {
+                                    alert("No se pudo registrar la ruta.");
+                                }
+                            });
+                        }
+
+
+                    });
+
+                    $('#frmRuta').validate({errorPlacement: function(error, element) {
+                    error.appendTo(element.parent());
+
+                }});
+
+                }});
+
+    });
+
+    $(document).jkey('shift+i',function(){
+
+          $(this).colorbox({open:"true",href:paginaURL+"lista/nitem.php",transition:'fade', speed:400,width:"650px", height:"350px",onComplete:function(){
+
+                    $('#btnRegistrar').click(function(){
+
+                       $("#selectRuta").rules("add", {
+                         required: true,remote:requestURL+"/lista/ajaxCheckItemLista.php",
+                         messages: {
+                           required: "<br>Este campo es requerido",
+                           remote:"<br>Esta ruta ya ha sido añadida a la lista"
+                         }
+                        });
+
+                        $("#txtPrecio").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtPrecioPago").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+
+
+                        if($('#frmItem').validate().element("#selectRuta") &
+                            $('#frmItem').validate().element("#txtPrecio") &
+                            $('#frmItem').validate().element("#txtPrecioPago")){
+
+                            $('#btnRegistrar').attr("disabled", "true");
+                            $.post(requestURL+"lista/ajaxRegistrarItem.php", $('#frmItem').serialize(), function(r){
+
+                                if(r=="ok")
+                                {
+                                    document.location=document.location;
+                                }else
+                                {
+                                    alert("No se pudo registrar el Item.");
+                                    $('#btnRegistrar').removeAttr("disabled");
+
+                                }
+                            });
+                        }
+
+
+                    });
+
+                    $('#frmItem').validate({errorPlacement: function(error, element) {
+                    error.appendTo(element.parent());
+
+                }});
+
+                }});
+    });
+
+
+    $(document).jkey('shift+p',function(){
+
+           $(this).colorbox({open:"true",href:paginaURL+"pasajero/npasajero.php",transition:'fade', speed:400,width:"550px", height:"520px",onComplete:function(){
+
+                    $('#btnRegistrar').click(function(){
+
+                       $("#txtNombre").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtTelefono").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtDireccion").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#selectEmpresa").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+
+
+
+
+                        if($('#frmPasajero').validate().element("#txtNombre") &
+                           $('#frmPasajero').validate().element("#txtTelefono") &
+                           $('#frmPasajero').validate().element("#txtDireccion") &
+                           $('#frmPasajero').validate().element("#selectEmpresa")){
+                            $('#btnRegistrar').attr("disabled", "true");
+                            $.post(requestURL+"pasajero/ajaxRegistrarPasajero.php", $('#frmPasajero').serialize(), function(r){
+
+                                if(r=="ok")
+                                {
+                                    document.location=document.location;
+                                }else
+                                {
+                                    alert("No se pudo registrar el pasajero.");
+                                    $('#btnRegistrar').removeAttr("disabled");
+                                }
+                            });
+                        }
+
+
+                    });
+
+                    $('#frmPasajero').validate({errorPlacement: function(error, element) {
+                    error.appendTo(element.parent());
+
+                }});
+
+                }});
+
+
+    });
+
+    $(document).jkey('shift+l',function(){
+
+                $(this).colorbox({open:"true",href:paginaURL+"lote/nlote.php",transition:'fade', speed:800,width:"500px", height:"350px",onComplete:function(){
+
+                    $('#btnRegistrar').click(function(){
+
+                       $("#txtDescripcion").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#selectEmpresa").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtFactura").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+
+                        if($('#frmLote').validate().element("#txtDescripcion") &
+                           $('#frmLote').validate().element("#txtFactura") &
+                           $('#frmLote').validate().element("#selectEmpresa")){
+
+                            $.post(requestURL+"lote/ajaxRegistrarLote.php", $('#frmLote').serialize(), function(r){
+
+                                if(r=="ok")
+                                {
+                                    document.location=document.location;
+                                }else
+                                {
+                                    alert("No se pudo registrar la Lote.");
+                                }
+                            });
+                        }
+
+
+                    });
+
+                    $('#frmLote').validate({errorPlacement: function(error, element) {
+                    error.appendTo(element.parent());
+
+                }});
+
+                }});
+    });
+
+    $("a[name='viewviaje']").live("click",function(){
+
+        idViaje=$(this).attr("id");
+
+        $(this).colorbox({open:true,href:paginaURL+"viaje/viewViaje.php?id="+$(this).attr("id"),transition:'fade', speed:400,width:"620px", height:"670px",onComplete:function(){
+                $("tr[class='trhide']").hide();
+
+
+
+        }});
+    });
+
+    $(document).jkey('f9',function(){
+        $("tr[class='trhide']").show();
+    });
+
+    $("input[type='checkbox']").live("click",function(){
+
+        if($(this).is(":checked")){
+            $("tr[id='"+$(this).attr('id')+"'] > td").css("background-color","#CFCFCF");
+        }else{
+            $("tr[id='"+$(this).attr('id')+"'] > td").css("background-color","#FFFFFF");
+        }
+    });
+
+    $(document).jkey('shift+c',function(){
+
+
+         $(this).colorbox({open:"true",href:paginaURL+"conductor/nconductor.php",transition:'fade', speed:400,width:"560px", height:"530px",onComplete:function(){
+
+                    $('#btnRegistrar').click(function(){
+
+                       $("#txtNombre").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtTelefono").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtDireccion").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+                        $("#txtCedula").rules("add", {
+                         required: true,number:true,
+                         messages: {
+                           required: "<br>Este campo es requerido",
+                           number:"<br>Este campo solo debe contener caracteres numéricos"
+                         }
+                        });
+
+                        $("#txtVehiculo").rules("add", {
+                         required: true,
+                         messages: {
+                           required: "<br>Este campo es requerido"
+                         }
+                        });
+
+
+                        if($('#frmConductor').validate().element("#txtNombre") &
+                           $('#frmConductor').validate().element("#txtTelefono") &
+                           $('#frmConductor').validate().element("#txtDireccion") &
+                           $('#frmConductor').validate().element("#txtVehiculo") &
+                           $('#frmConductor').validate().element("#txtCedula")){
+                            $('#btnRegistrar').attr("disabled", "true");
+                            $.post(requestURL+"conductor/ajaxRegistrarConductor.php", $('#frmConductor').serialize(), function(r){
+
+                                if(r=="ok")
+                                {
+                                    document.location=document.location;
+                                }else
+                                {
+                                    alert("No se pudo registrar el conductor.");
+                                    $('#btnRegistrar').removeAttr("disabled");
+                                }
+                            });
+                        }
+
+
+                    });
+
+                    $('#frmConductor').validate({errorPlacement: function(error, element) {
+                    error.appendTo(element.parent());
+
+                }});
+
+                }});
+
+
+    });
+
+    
+*/
+
+});
